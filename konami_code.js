@@ -12,21 +12,23 @@ const codes = [
 ];
 
 function init() {
+
   let index = 0;
 
-  function onKeyDownHandler(e){
-    const key = e.key;
+  document.body.addEventListener('keyDown',
+    function onKeyDownHandler(e){
+      const key = e.key;
 
-    if(key === codes[index]){
-      index++;
+      if(key === codes[index]){
+        index++;
 
-      if(index === codes.length){
-        alert("Hurray!");
+        if(index === codes.length){
+          alert("Hurray!");
 
+          index = 0;
+        }
+      } else {
         index = 0;
       }
-    } else {
-      index = 0;
-    }
-  }
+    } )
 }
