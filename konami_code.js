@@ -17,7 +17,7 @@ function init() {
 
   var body = document.getElementById('body');
 
-  body.addEventListener('keyDown',
+  body.addEventListener('keydown',
     function onKeyDownHandler(e){
       const key = e.key;
 
